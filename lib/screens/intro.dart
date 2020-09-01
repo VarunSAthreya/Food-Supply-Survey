@@ -21,7 +21,7 @@ class IntroScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
                   'Food Survey',
@@ -31,30 +31,29 @@ class IntroScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  'Hi Folks!',
-                  textScaleFactor: 1.8,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Mont',
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'We are here for a survey to raise funds for food supplies and ration kits to slums',
-                  textScaleFactor: 1.2,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white.withOpacity(0.35),
-                  ),
-                ),
-                SizedBox(
-                  height: 50,
+                Column(
+                  children: [
+                    Text(
+                      'Hi Folks!',
+                      textScaleFactor: 1.8,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Mont',
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      'We are here for a survey to raise funds for food supplies and ration kits for slums',
+                      textScaleFactor: 1.2,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.35),
+                        fontFamily: 'Mont',
+                      ),
+                    ),
+                  ],
                 ),
                 FloatingActionButton(
                   onPressed: () {},
@@ -64,7 +63,7 @@ class IntroScreen extends StatelessWidget {
                     size: 30,
                   ),
                   backgroundColor: Colors.white,
-                  splashColor: Theme.of(context).accentColor,
+                  splashColor: Theme.of(context).accentColor.withOpacity(0.8),
                   elevation: 3,
                 )
               ],
