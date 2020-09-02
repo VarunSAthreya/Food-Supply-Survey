@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gs_covid19_food_supply_easy/screens/add_user.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -43,6 +44,11 @@ class HomeScreen extends StatelessWidget {
                         buildNavigoationButton(
                           context: context,
                           title: 'Add user',
+                          onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AddUser(),
+                              )),
                         ),
                         const SizedBox(
                           height: 20,
@@ -73,7 +79,7 @@ class HomeScreen extends StatelessWidget {
   Widget buildNavigoationButton(
       {BuildContext context, String title, Function onPressed}) {
     return FlatButton(
-      onPressed: () => onPressed,
+      onPressed: () => onPressed(),
       color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30.0),

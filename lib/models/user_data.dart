@@ -2,7 +2,7 @@ import 'dart:collection';
 import 'package:flutter/foundation.dart';
 import 'package:gs_covid19_food_supply_easy/models/user.dart';
 
-class TasksData extends ChangeNotifier {
+class UserData extends ChangeNotifier {
   final List<User> _user = [];
   int get taskCount {
     return _user.length;
