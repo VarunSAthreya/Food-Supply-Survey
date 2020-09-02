@@ -23,7 +23,7 @@ class IntroScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
+                const Text(
                   'Food Survey',
                   textScaleFactor: 3.0,
                   style: TextStyle(
@@ -33,7 +33,7 @@ class IntroScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       'Hi Folks!',
                       textScaleFactor: 1.8,
                       style: TextStyle(
@@ -41,7 +41,7 @@ class IntroScreen extends StatelessWidget {
                         fontFamily: 'Mont',
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text(
