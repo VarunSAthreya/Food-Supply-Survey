@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gs_covid19_food_supply_easy/screens/home.dart';
 
 class IntroScreen extends StatelessWidget {
   @override
@@ -29,6 +30,7 @@ class IntroScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
+                    fontFamily: 'Popins',
                   ),
                 ),
                 Column(
@@ -38,7 +40,6 @@ class IntroScreen extends StatelessWidget {
                       textScaleFactor: 1.8,
                       style: TextStyle(
                         color: Colors.white,
-                        fontFamily: 'Mont',
                       ),
                     ),
                     const SizedBox(
@@ -50,21 +51,23 @@ class IntroScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white.withOpacity(0.35),
-                        fontFamily: 'Mont',
                       ),
                     ),
                   ],
                 ),
                 FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                  },
+                  backgroundColor: Colors.white,
+                  splashColor: Theme.of(context).accentColor.withOpacity(0.8),
+                  elevation: 3,
                   child: Icon(
                     CupertinoIcons.forward,
                     color: Theme.of(context).primaryColor,
                     size: 30,
                   ),
-                  backgroundColor: Colors.white,
-                  splashColor: Theme.of(context).accentColor.withOpacity(0.8),
-                  elevation: 3,
                 )
               ],
             ),

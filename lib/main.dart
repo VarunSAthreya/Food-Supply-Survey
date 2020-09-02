@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: Color(0xFF0F0230),
-        accentColor: Color(0xFF361767),
-        backgroundColor: Color(0xFFEEEEEE),
-        fontFamily: "Popins",
+        primaryColor: const Color(0xFF0F0230),
+        accentColor: const Color(0xFF361767),
+        backgroundColor: const Color(0xFFEEEEEE),
+        fontFamily: "Mont",
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
