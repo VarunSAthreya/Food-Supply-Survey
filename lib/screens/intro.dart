@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gs_covid19_food_supply_easy/screens/home.dart';
+
+import 'home.dart';
 
 class IntroScreen extends StatelessWidget {
   @override

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gs_covid19_food_supply_easy/screens/add_user.dart';
+
+import 'add_user.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

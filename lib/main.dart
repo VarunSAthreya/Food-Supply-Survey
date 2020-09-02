@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gs_covid19_food_supply_easy/models/user_data.dart';
 import 'package:provider/provider.dart';
+
+import './models/user_data.dart';
 import 'screens/intro.dart';
 
 void main() {

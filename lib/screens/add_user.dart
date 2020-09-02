@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gs_covid19_food_supply_easy/models/user_data.dart';
-import 'package:gs_covid19_food_supply_easy/widgets/custom_dropdown.dart';
-import 'package:gs_covid19_food_supply_easy/widgets/custom_text_filed.dart';
 import 'package:provider/provider.dart';
+
+import '../models/user_data.dart';
+import '../widgets/custom_dropdown.dart';
+import '../widgets/custom_text_filed.dart';
 
 class AddUser extends StatefulWidget {
   @override

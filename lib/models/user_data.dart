@@ -1,6 +1,7 @@
 import 'dart:collection';
 import 'package:flutter/foundation.dart';
-import 'package:gs_covid19_food_supply_easy/models/user.dart';
+
+import 'user.dart';
 
 class UserData extends ChangeNotifier {
   final List<User> _user = [];
