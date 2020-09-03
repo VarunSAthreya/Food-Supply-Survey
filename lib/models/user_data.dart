@@ -35,4 +35,45 @@ class UserData extends ChangeNotifier {
     ));
     notifyListeners();
   }
+
+  Map<String, int> proflieInfoCounter() {
+    Map<String, int> profileInfo = {};
+
+    int infant = 0;
+    int children = 0;
+    int old = 0;
+    int adultM = 0;
+    int adultF = 0;
+    int adultO = 0;
+
+    for (int i = 0; i < _user.length; i++) {
+      if (_user[i].age < 2) {
+        infant++;
+      } else if (_user[i].age < 18) {
+        children++;
+      } else if (_user[i].age < 70) {
+        switch (_user[i].gender) {
+          case "Male":
+            adultM++;
+            break;
+          case "Female":
+            adultF++;
+            break;
+          default:
+            adultO++;
+        }
+      } else {
+        old++;
+      }
+    }
+
+    profileInfo['infant'] = infant;
+    profileInfo['children'] = children;
+    profileInfo['old'] = old;
+    profileInfo['adultM'] = adultM;
+    profileInfo['adultF'] = adultF;
+    profileInfo['adultO'] = adultO;
+
+    return profileInfo;
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:Food_supply_survey/screens/person_info.dart';
 import 'package:flutter/material.dart';
 
 import 'add_user.dart';
@@ -57,6 +58,11 @@ class HomeScreen extends StatelessWidget {
                         buildNavigoationButton(
                           context: context,
                           title: 'Person Info',
+                          onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PersonInfo(),
+                              )),
                         ),
                         const SizedBox(
                           height: 20,
