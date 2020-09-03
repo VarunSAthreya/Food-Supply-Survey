@@ -76,4 +76,103 @@ class UserData extends ChangeNotifier {
 
     return profileInfo;
   }
+
+  Map<String, int> foodInfoCounter() {
+    Map<String, int> foodInfo = {};
+
+    int rice = 0;
+    int dal = 0;
+    int ceralic = 0;
+    int amul = 0;
+    int milk = 0;
+    int bread = 0;
+    int biscuits = 0;
+    int veggis = 0;
+    int fruits = 0;
+    int medicine = 0;
+    int calcTab = 0;
+
+    for (int i = 0; i < _user.length; i++) {
+      rice += _user[i].rice;
+      dal += _user[i].dal;
+
+      switch (_user[i].specialFood1) {
+        case 'Cerelac':
+          ceralic++;
+          break;
+        case 'Amul powder':
+          amul++;
+          break;
+        case 'Nandini Milk TetraPacks':
+          milk++;
+          break;
+        case 'Bread':
+          bread++;
+          break;
+        case 'Tiger/Parle G':
+          biscuits++;
+          break;
+        case 'Canned Fruits':
+          fruits++;
+          break;
+        case 'Canned Veggies':
+          veggis++;
+          break;
+        case 'Medicine Packs':
+          medicine++;
+          break;
+        case 'Calcium Sandoz Tablets':
+          calcTab++;
+          break;
+        default:
+          break;
+      }
+
+      switch (_user[i].specialFood2) {
+        case 'Cerelac':
+          ceralic++;
+          break;
+        case 'Amul powder':
+          amul++;
+          break;
+        case 'Nandini Milk TetraPacks':
+          milk++;
+          break;
+        case 'Bread':
+          bread++;
+          break;
+        case 'Tiger/Parle G':
+          biscuits++;
+          break;
+        case 'Canned Fruits':
+          fruits++;
+          break;
+        case 'Canned Veggies':
+          veggis++;
+          break;
+        case 'Medicine Packs':
+          medicine++;
+          break;
+        case 'Calcium Sandoz Tablets':
+          calcTab++;
+          break;
+        default:
+          break;
+      }
+    }
+
+    foodInfo['rice'] = (rice / 1000).round();
+    foodInfo['dal'] = (dal / 1000).round();
+    foodInfo['ceralic'] = ceralic;
+    foodInfo['amul'] = amul;
+    foodInfo['milk'] = milk;
+    foodInfo['bread'] = bread;
+    foodInfo['biscuits'] = biscuits;
+    foodInfo['veggis'] = veggis;
+    foodInfo['fruits'] = fruits;
+    foodInfo['medicine'] = medicine;
+    foodInfo['calcTab'] = calcTab;
+
+    return foodInfo;
+  }
 }

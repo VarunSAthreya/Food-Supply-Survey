@@ -1,3 +1,4 @@
+import 'package:Food_supply_survey/screens/food_info.dart';
 import 'package:Food_supply_survey/screens/person_info.dart';
 import 'package:flutter/material.dart';
 
@@ -70,6 +71,11 @@ class HomeScreen extends StatelessWidget {
                         buildNavigoationButton(
                           context: context,
                           title: 'Food Info',
+                          onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FoodInfo(),
+                              )),
                         ),
                       ],
                     ),
