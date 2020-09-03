@@ -74,6 +74,8 @@ class UserData extends ChangeNotifier {
     profileInfo['adultF'] = adultF;
     profileInfo['adultO'] = adultO;
 
+    notifyListeners();
+
     return profileInfo;
   }
 
@@ -172,6 +174,8 @@ class UserData extends ChangeNotifier {
     foodInfo['fruits'] = fruits;
     foodInfo['medicine'] = medicine;
     foodInfo['calcTab'] = calcTab;
+
+    notifyListeners();
 
     return foodInfo;
   }
