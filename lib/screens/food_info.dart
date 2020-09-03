@@ -1,6 +1,8 @@
-import 'package:Food_supply_survey/models/user_data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../models/user_data.dart';
+import '../widgets/custom_list_container.dart';
 
 class FoodInfo extends StatelessWidget {
   @override
@@ -48,35 +50,60 @@ class FoodInfo extends StatelessWidget {
                       padding: const EdgeInsets.all(50.0),
                       child: Column(
                         children: [
-                          buildList(
-                              context, 'Rice in Kg per day', foodInfo['rice']),
+                          CustomListContainer(
+                            title: 'Rice in Kg per day',
+                            value: foodInfo['rice'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(
-                              context, 'Dal in Kg per day', foodInfo['dal']),
+                          CustomListContainer(
+                            title: 'Dal in Kg per day',
+                            value: foodInfo['dal'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(context, 'Ceralic', foodInfo['ceralic']),
+                          CustomListContainer(
+                            title: 'Ceralic',
+                            value: foodInfo['ceralic'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(context, 'Amul powder', foodInfo['amul']),
+                          CustomListContainer(
+                            title: 'Amul powder',
+                            value: foodInfo['amul'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(context, 'Nandini Milk TetraPacks',
-                              foodInfo['milk']),
+                          CustomListContainer(
+                            title: 'Nandini Milk TetraPacks',
+                            value: foodInfo['milk'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(context, 'Bread', foodInfo['bread']),
+                          CustomListContainer(
+                            title: 'Bread',
+                            value: foodInfo['bread'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(context, 'Tiger/Parle G Biscuits',
-                              foodInfo['biscuits']),
+                          CustomListContainer(
+                            title: 'Tiger/Parle G Biscuits',
+                            value: foodInfo['biscuits'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(
-                              context, 'Canned Veggies', foodInfo['veggis']),
+                          CustomListContainer(
+                            title: 'Canned Veggies',
+                            value: foodInfo['veggis'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(
-                              context, 'Canned Fruits', foodInfo['fruits']),
+                          CustomListContainer(
+                            title: 'Canned Fruits',
+                            value: foodInfo['fruits'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(
-                              context, 'Medicine Packs', foodInfo['medicine']),
+                          CustomListContainer(
+                            title: 'Medicine Packs',
+                            value: foodInfo['medicine'],
+                          ),
                           const SizedBox(height: 5),
-                          buildList(context, 'Calcium Sandoz Tablets',
-                              foodInfo['calcTab']),
+                          CustomListContainer(
+                            title: 'Calcium Sandoz Tablets',
+                            value: foodInfo['calcTab'],
+                          ),
                         ],
                       ),
                     ),
@@ -85,41 +112,6 @@ class FoodInfo extends StatelessWidget {
               ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-
-  Container buildList(BuildContext context, String key, int val) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20.0),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Row(
-          children: [
-            Expanded(
-              flex: 4,
-              child: Text(
-                key,
-                textScaleFactor: 1.3,
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                ),
-              ),
-            ),
-            Expanded(
-              child: Text(
-                '$val',
-                textScaleFactor: 1.3,
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                ),
-              ),
-            ),
-          ],
         ),
       ),
     );

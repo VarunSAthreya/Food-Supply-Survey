@@ -1,8 +1,8 @@
-import 'package:Food_supply_survey/screens/food_info.dart';
-import 'package:Food_supply_survey/screens/person_info.dart';
 import 'package:flutter/material.dart';
 
 import 'add_user.dart';
+import 'food_info.dart';
+import 'person_info.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

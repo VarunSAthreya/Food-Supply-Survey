@@ -1,6 +1,8 @@
-import 'package:Food_supply_survey/models/user_data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../models/user_data.dart';
+import '../widgets/custom_list_container.dart';
 
 class PersonInfo extends StatelessWidget {
   @override
@@ -47,52 +49,29 @@ class PersonInfo extends StatelessWidget {
                     padding: const EdgeInsets.all(50.0),
                     child: Column(
                       children: [
-                        buildList(context, 'Infant', profileInfo['infant']),
+                        CustomListContainer(
+                            title: 'Infant', value: profileInfo['infant']),
                         const SizedBox(height: 5),
-                        buildList(context, 'Children', profileInfo['children']),
+                        CustomListContainer(
+                            title: 'Children', value: profileInfo['children']),
                         const SizedBox(height: 5),
-                        buildList(context, 'Adult Male', profileInfo['adultM']),
+                        CustomListContainer(
+                            title: 'Adult Male', value: profileInfo['adultM']),
                         const SizedBox(height: 5),
-                        buildList(
-                            context, 'Adult Female', profileInfo['adultF']),
+                        CustomListContainer(
+                            title: 'Adult Female',
+                            value: profileInfo['adultF']),
                         const SizedBox(height: 5),
-                        buildList(
-                            context, 'Adult Other', profileInfo['adultO']),
+                        CustomListContainer(
+                            title: 'Adult Other', value: profileInfo['adultO']),
                         const SizedBox(height: 5),
-                        buildList(context, 'Old', profileInfo['old']),
+                        CustomListContainer(
+                            title: 'Old', value: profileInfo['old']),
                       ],
                     ),
                   ),
                 ),
               ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Container buildList(BuildContext context, String key, int val) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20.0),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: ListTile(
-          leading: Text(
-            key,
-            textScaleFactor: 1.3,
-            style: TextStyle(
-              color: Theme.of(context).primaryColor,
-            ),
-          ),
-          trailing: Text(
-            '$val',
-            textScaleFactor: 1.3,
-            style: TextStyle(
-              color: Theme.of(context).primaryColor,
             ),
           ),
         ),
