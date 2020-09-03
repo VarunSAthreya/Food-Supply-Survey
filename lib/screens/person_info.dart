@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 class PersonInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Map<String, int> profileInfo =
+    final Map<String, int> profileInfo =
         Provider.of<UserData>(context, listen: false).proflieInfoCounter();
     return Scaffold(
       body: Container(

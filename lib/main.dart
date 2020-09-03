@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import './models/user_data.dart';
+import 'models/user_data.dart';
 import 'screens/intro.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => UserData(),
       child: MaterialApp(
-        title: 'GS Food Survey App',
+        title: 'Food Survey App',
         theme: ThemeData(
           primaryColor: const Color(0xFF0F0230),
           accentColor: const Color(0xFF361767),
