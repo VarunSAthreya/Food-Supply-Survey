@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../models/user_data.dart';
-import '../widgets/custom_list_container.dart';
+import '../widgets/profile_info_list_container.dart';
 
 class PersonInfo extends StatelessWidget {
   @override
@@ -64,27 +64,27 @@ class PersonInfo extends StatelessWidget {
                             )
                           : Column(
                               children: [
-                                CustomListContainer(
+                                ProfileInfoListContainer(
                                     title: 'Infant',
                                     value: profileInfo['infant']),
                                 const SizedBox(height: 5),
-                                CustomListContainer(
+                                ProfileInfoListContainer(
                                     title: 'Children',
                                     value: profileInfo['children']),
                                 const SizedBox(height: 5),
-                                CustomListContainer(
+                                ProfileInfoListContainer(
                                     title: 'Adult Male',
                                     value: profileInfo['adultM']),
                                 const SizedBox(height: 5),
-                                CustomListContainer(
+                                ProfileInfoListContainer(
                                     title: 'Adult Female',
                                     value: profileInfo['adultF']),
                                 const SizedBox(height: 5),
-                                CustomListContainer(
+                                ProfileInfoListContainer(
                                     title: 'Adult Other',
                                     value: profileInfo['adultO']),
                                 const SizedBox(height: 5),
-                                CustomListContainer(
+                                ProfileInfoListContainer(
                                     title: 'Old', value: profileInfo['old']),
                               ],
                             ),

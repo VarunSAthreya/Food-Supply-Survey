@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CustomListContainer extends StatelessWidget {
+class ProfileInfoListContainer extends StatelessWidget {
   final String title;
   final int value;
 
-  const CustomListContainer({this.title, this.value});
+  const ProfileInfoListContainer({this.title, this.value});
 
   @override
   Widget build(BuildContext context) {

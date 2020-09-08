@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../models/user_data.dart';
-import '../widgets/custom_list_container.dart';
+import '../widgets/food_info_list_container.dart';
 
 class FoodInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Map<String, int> foodInfo =
+    final Map<String, List> foodInfo =
         Provider.of<UserData>(context, listen: false).foodInfoCounter();
     return Scaffold(
       body: Container(
@@ -47,7 +47,7 @@ class FoodInfo extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(50.0),
+                      padding: const EdgeInsets.all(30.0),
                       child: foodInfo.isEmpty
                           ? Container(
                               decoration: BoxDecoration(
@@ -64,59 +64,59 @@ class FoodInfo extends StatelessWidget {
                             )
                           : Column(
                               children: [
-                                CustomListContainer(
+                                FoodInfoListContainer(
                                   title: 'Rice in Kg per day',
-                                  value: foodInfo['rice'],
+                                  values: foodInfo['rice'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
                                   title: 'Dal in Kg per day',
-                                  value: foodInfo['dal'],
+                                  values: foodInfo['dal'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
-                                  title: 'Ceralic',
-                                  value: foodInfo['ceralic'],
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
+                                  title: 'Cerelac 1 pack',
+                                  values: foodInfo['ceralic'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
-                                  title: 'Amul powder',
-                                  value: foodInfo['amul'],
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
+                                  title: 'Amul powder 1Kg',
+                                  values: foodInfo['amul'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
-                                  title: 'Nandini Milk TetraPacks',
-                                  value: foodInfo['milk'],
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
+                                  title: 'Nandini Milk TetraPacks 1lt',
+                                  values: foodInfo['milk'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
-                                  title: 'Bread',
-                                  value: foodInfo['bread'],
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
+                                  title: 'Bread loaf 1pack',
+                                  values: foodInfo['bread'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
-                                  title: 'Tiger/Parle G Biscuits',
-                                  value: foodInfo['biscuits'],
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
+                                  title: 'Tiger/Parle G Biscuits 5pieces Pack	',
+                                  values: foodInfo['biscuits'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
                                   title: 'Canned Veggies',
-                                  value: foodInfo['veggis'],
+                                  values: foodInfo['veggis'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
                                   title: 'Canned Fruits',
-                                  value: foodInfo['fruits'],
+                                  values: foodInfo['fruits'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
                                   title: 'Medicine Packs',
-                                  value: foodInfo['medicine'],
+                                  values: foodInfo['medicine'],
                                 ),
-                                const SizedBox(height: 5),
-                                CustomListContainer(
+                                const SizedBox(height: 15),
+                                FoodInfoListContainer(
                                   title: 'Calcium Sandoz Tablets',
-                                  value: foodInfo['calcTab'],
+                                  values: foodInfo['calcTab'],
                                 ),
                               ],
                             ),

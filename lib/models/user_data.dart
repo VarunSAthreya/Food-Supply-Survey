@@ -81,13 +81,13 @@ class UserData extends ChangeNotifier {
     return profileInfo;
   }
 
-  Map<String, int> foodInfoCounter() {
+  Map<String, List> foodInfoCounter() {
     if (_user.isEmpty) return {};
 
-    Map<String, int> foodInfo = {};
+    Map<String, List> foodInfo = {};
 
-    int rice = 0;
-    int dal = 0;
+    double rice = 0;
+    double dal = 0;
     int ceralic = 0;
     int amul = 0;
     int milk = 0;
@@ -167,17 +167,20 @@ class UserData extends ChangeNotifier {
       }
     }
 
-    foodInfo['rice'] = (rice / 1000).round();
-    foodInfo['dal'] = (dal / 1000).round();
-    foodInfo['ceralic'] = ceralic;
-    foodInfo['amul'] = amul;
-    foodInfo['milk'] = milk;
-    foodInfo['bread'] = bread;
-    foodInfo['biscuits'] = biscuits;
-    foodInfo['veggis'] = veggis;
-    foodInfo['fruits'] = fruits;
-    foodInfo['medicine'] = medicine;
-    foodInfo['calcTab'] = calcTab;
+    rice = rice / 1000;
+    dal = dal / 1000;
+
+    foodInfo['rice'] = [rice, 30, (rice * 30 * 40)];
+    foodInfo['dal'] = [dal, 30, (dal * 30 * 65)];
+    foodInfo['ceralic'] = [ceralic, 3, (ceralic * 3 * 140)];
+    foodInfo['amul'] = [amul, 1, (amul * 1 * 240)];
+    foodInfo['milk'] = [milk, 8, (milk * 8 * 45)];
+    foodInfo['bread'] = [bread, 4, (bread * 4 * 25)];
+    foodInfo['biscuits'] = [biscuits, 3, (biscuits * 3 * 30)];
+    foodInfo['veggis'] = [veggis, 4, (veggis * 4 * 100)];
+    foodInfo['fruits'] = [fruits, 4, (fruits * 4 * 100)];
+    foodInfo['medicine'] = [medicine, 1, (medicine * 1 * 500)];
+    foodInfo['calcTab'] = [calcTab, 1, (calcTab * 1 * 500)];
 
     notifyListeners();
 
