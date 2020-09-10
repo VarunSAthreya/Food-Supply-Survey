@@ -182,6 +182,21 @@ class UserData extends ChangeNotifier {
     foodInfo['medicine'] = [medicine, 1, (medicine * 1 * 500)];
     foodInfo['calcTab'] = [calcTab, 1, (calcTab * 1 * 500)];
 
+    foodInfo['total'] = [
+      (foodInfo['rice'][2] +
+              foodInfo['dal'][2] +
+              foodInfo['ceralic'][2] +
+              foodInfo['amul'][2] +
+              foodInfo['milk'][2] +
+              foodInfo['bread'][2] +
+              foodInfo['biscuits'][2] +
+              foodInfo['veggis'][2] +
+              foodInfo['fruits'][2] +
+              foodInfo['medicine'][2] +
+              foodInfo['calcTab'][2])
+          .round(),
+    ];
+
     notifyListeners();
 
     return foodInfo;

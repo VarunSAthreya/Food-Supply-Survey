@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ProfileInfoListContainer extends StatelessWidget {
   final String title;
-  final int value;
+  final dynamic value;
 
   const ProfileInfoListContainer({this.title, this.value});
 

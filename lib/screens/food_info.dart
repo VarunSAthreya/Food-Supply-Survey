@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../models/user_data.dart';
 import '../widgets/food_info_list_container.dart';
+import '../widgets/profile_info_list_container.dart';
 
 class FoodInfo extends StatelessWidget {
   @override
@@ -118,6 +119,11 @@ class FoodInfo extends StatelessWidget {
                                   title: 'Calcium Sandoz Tablets',
                                   values: foodInfo['calcTab'],
                                 ),
+                                const SizedBox(height: 15),
+                                ProfileInfoListContainer(
+                                  title: 'Total',
+                                  value: foodInfo['total'][0],
+                                )
                               ],
                             ),
                     ),
