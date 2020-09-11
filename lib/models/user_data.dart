@@ -5,7 +5,7 @@ import 'user.dart';
 
 class UserData extends ChangeNotifier {
   final List<User> _user = [];
-  int get taskCount {
+  int get userCount {
     return _user.length;
   }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'models/slum_data.dart';
 import 'models/user_data.dart';
 import 'screens/intro.dart';
 
@@ -12,8 +13,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => UserData(),
+    return MultiProvider(
+      providers: [
+        Provider<UserData>(create: (context) => UserData()),
+        Provider<SlumData>(create: (context) => SlumData()),
+      ],
       child: MaterialApp(
         title: 'Food Survey App',
         theme: ThemeData(
