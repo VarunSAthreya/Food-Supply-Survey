@@ -174,57 +174,57 @@ class UserData extends ChangeNotifier {
     foodInfo['rice'] = [
       rice,
       MonthlyQuantity.rice,
-      (rice * MonthlyQuantity.rice * MonthlyPrice.rice)
+      (rice * MonthlyQuantity.rice * MonthlyPrice.rice).round()
     ];
     foodInfo['dal'] = [
       dal,
       MonthlyQuantity.dal,
-      (dal * MonthlyQuantity.dal * MonthlyPrice.dal)
+      (dal * MonthlyQuantity.dal * MonthlyPrice.dal).round()
     ];
     foodInfo['ceralic'] = [
       ceralic,
       MonthlyQuantity.ceralic,
-      (ceralic * MonthlyQuantity.ceralic * MonthlyPrice.ceralic)
+      (ceralic * MonthlyQuantity.ceralic * MonthlyPrice.ceralic).round()
     ];
     foodInfo['amul'] = [
       amul,
       MonthlyQuantity.amul,
-      (amul * MonthlyQuantity.amul * MonthlyPrice.amul)
+      (amul * MonthlyQuantity.amul * MonthlyPrice.amul).round()
     ];
     foodInfo['milk'] = [
       milk,
       MonthlyQuantity.milk,
-      (milk * MonthlyQuantity.milk * MonthlyPrice.milk)
+      (milk * MonthlyQuantity.milk * MonthlyPrice.milk).round()
     ];
     foodInfo['bread'] = [
       bread,
       MonthlyQuantity.bread,
-      (bread * MonthlyQuantity.bread * MonthlyPrice.bread)
+      (bread * MonthlyQuantity.bread * MonthlyPrice.bread).round()
     ];
     foodInfo['biscuits'] = [
       biscuits,
       MonthlyQuantity.biscuits,
-      (biscuits * MonthlyQuantity.biscuits * MonthlyPrice.biscuits)
+      (biscuits * MonthlyQuantity.biscuits * MonthlyPrice.biscuits).round()
     ];
     foodInfo['veggis'] = [
       veggis,
       MonthlyQuantity.veggis,
-      (veggis * MonthlyQuantity.veggis * MonthlyPrice.veggis)
+      (veggis * MonthlyQuantity.veggis * MonthlyPrice.veggis).round()
     ];
     foodInfo['fruits'] = [
       fruits,
       MonthlyQuantity.fruits,
-      (fruits * MonthlyQuantity.fruits * MonthlyPrice.fruits)
+      (fruits * MonthlyQuantity.fruits * MonthlyPrice.fruits).round()
     ];
     foodInfo['medicine'] = [
       medicine,
       MonthlyQuantity.medicine,
-      (medicine * MonthlyQuantity.medicine * MonthlyPrice.medicine)
+      (medicine * MonthlyQuantity.medicine * MonthlyPrice.medicine).round()
     ];
     foodInfo['calcTab'] = [
       calcTab,
       MonthlyQuantity.calcTab,
-      (calcTab * MonthlyQuantity.calcTab * MonthlyPrice.calcTab)
+      (calcTab * MonthlyQuantity.calcTab * MonthlyPrice.calcTab).round()
     ];
 
     foodInfo['total'] = [
